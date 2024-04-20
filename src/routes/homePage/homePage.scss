@@ -1,0 +1,78 @@
+@import "../layout/layout.scss";
+.homePage{
+    display:flex;
+    height:100%;
+    .textContainer{
+        flex:3;
+        .wrapper{
+            padding-right:100px;
+            display:flex;
+            flex-direction:column;
+            gap:50px;
+            height:100%;
+
+            @include md
+            {
+                padding-right:0px;
+            }
+            @include sm
+            {
+                gap:30px;
+            }
+
+            .title{
+                font-size:62px;
+                text-transform:capitalize;
+                @include sm
+                {
+                    font-size:45px;
+                }
+            }
+
+            p
+            {
+                font-size: 15px;
+                @include sm
+                {
+                    font-size: 14px;
+                    line-height:25px;
+                }
+            }
+            
+            .boxes
+            {
+                display:flex;
+                justify-content:space-between;
+                align-items:center;
+                @include sm
+                {
+                    display:none;
+                }
+                h1{
+                    font-size:36px;
+                }
+                h2{
+                    font-size:15px;
+                    font-weight:300;
+                }
+            }
+        }
+    }
+
+
+    .imgContainer{
+        flex:2;
+        background-color:#fcf5f3;
+        position:relative;
+
+        img{
+            width:105%;
+            height:100%;
+            position:absolute;
+            right:0;
+        }
+        @include md{
+            display:none;
+        }
+    }
+}
