@@ -18,8 +18,8 @@ function Navbar(){
                 <a href='#'>contact</a>
             </div>
             <div className="right">
-                <a href='#'>sign in</a>
-                <a href='#' className="register">sing up</a>
+                <Link to='/signin'>sign in</Link>
+                <Link to='/signup' className="register">sing up</Link>
                 
                 <div className="menuicon">
                     <img src="/menu.png" title="menu" onClick={()=>setOpen(prev=>!prev)} />

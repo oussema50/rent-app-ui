@@ -1,0 +1,36 @@
+.RegisterPage
+{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+.form{
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    
+}
+.form form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+}
+
+.form form input,select
+{
+    width:100%;
+    padding:10px 15px;
+}
+
+.form form  button
+{
+    width: 100px;
+    padding: 10px 12px;
+    background-color: #f4be31;
+    border: none;
+    font-weight: 600;
+}

@@ -1,22 +1,21 @@
 import "./card.scss";
 import {Link} from "react-router-dom"
 function Card({item}){
-    console.log(item)
     return(
         <div  className="card">
             <Link to={`/rent/${item.id}`} className="imgcontainer">
-                <img src={item.img} alt="" />
+                <img src="/appartments/img1.jpg" alt="" />
             </Link>
             <div className="textcontainer">
                 <Link to={`/rent/${item.id}`}>
-                    <h2 className="title">{item.title}</h2>
+                    <h2 className="title">{item.id}</h2>
                 
                 </Link>
                 <p className="address">
                     <img src="/pin.png" alt="address" />
-                    <span>{item.address}</span>
+                    <span>{item.adresse}</span>
                 </p>
-                <p className="price">$ {item.price} </p>
+                <p className="price">$ {item.prix} </p>
 
                 <div className="bottom"> 
                     <div className="features">
