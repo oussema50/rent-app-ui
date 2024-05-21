@@ -1,10 +1,10 @@
 import { useState } from "react";
-import "./appartmentList.scss";
+import "./reservation.scss";
 import axios from 'axios';
 import { useNavigate,Link } from "react-router-dom";
 import { useAuth } from "../../components/AuthContext";
 import User from "../../components/user/User"
-function AppartmentList({appartments}){
+function ReservationList({rentappartements}){
     const token = localStorage.getItem('token');
     const navigate = useNavigate()
     const DeleteAppartment = async (id) => {
@@ -24,24 +24,20 @@ function AppartmentList({appartments}){
         <table>
             <tr>
                 <th>Id</th>
-                <th>Adresse</th>
-                <th>Prix</th>
-                <th>Places</th>
-                <th>Max Places</th>
-                <th>Status</th>
+                <th>appartement</th>
+                <th>date_reservation</th>
+                <th>date_retour</th>
                 <th>Action</th>
             </tr>
-            {appartments?appartments.map(appartment=>
+            {rentappartements?rentappartements.map(appartment=>
                 (<tr key={appartment.id}>
                     <td>{appartment.id}</td>
-                    <td>{appartment.adresse}</td>
-                    <td>{appartment.prix}</td>
-                    <td>{appartment.places}</td>
-                    <td>{appartment.max_places}</td>
-                    <td>{appartment.status?'not Available':'Available'}</td>
+                    <td>{appartment.appartement}</td>
+                    <td>{appartment.date_reservation}</td>
+                    <td>{appartment.date_retour}</td>
                     <td>
                         <button className="update_btn" >
-                          <Link to={`/update/appartement/${appartment.id}`}>
+                          <Link to={`/update/reservation/${appartment.id}`}>
                             update
                           </Link>
                         </button>
@@ -55,6 +51,6 @@ function AppartmentList({appartments}){
     );
 }
 
-export default AppartmentList;
+export default ReservationList;
 
 

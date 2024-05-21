@@ -7,10 +7,27 @@ table {
         border: 1px solid #dddddd;
         text-align: left;
         padding: 8px;
+        button{
+            padding: 10px 15px;
+            margin-right: 15px;
+            border: none;
+            
+            color: white;
+            font-weight: 700;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .update_btn{
+            background: #12a212;
+        }
+        .delete_btn{
+            background:#d31515;
+        }
     }
     tr:nth-child(even)
     {
-        background-color: #dddddd;
+        background-color: #f4f4f4;
+        
     }
   }
   

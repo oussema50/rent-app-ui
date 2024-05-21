@@ -1,6 +1,7 @@
 import { useState,useEffect  } from "react";
 import "./createAppartment.scss";
 import axios from 'axios';
+
 import { useNavigate ,Link } from "react-router-dom";
 
 function CreateAppartment(){
@@ -27,7 +28,7 @@ function CreateAppartment(){
         e.preventDefault();
         console.log(formData)
         
-        axios.post( `https://slimy-foxes-lose.loca.lt/api/appartements/`,formData,
+        axios.post( `https://wide-rice-battle.loca.lt/api/appartements/`,formData,
         {
             headers: {
               Authorization: `Token ${token}`,
@@ -45,7 +46,7 @@ function CreateAppartment(){
                     <input type="number" name="prix"  placeholder="prix" onChange={handelInput}   />           
                     <input type="number" name="places"  placeholder="places" onChange={handelInput}   />           
                     <input type="number" name="max_places"  placeholder="max places" onChange={handelInput}   />
-                    <button type="submit">Reserver</button>
+                    <button type="submit">Submit</button>
                 </form>
            </div>
         </div>

@@ -31,7 +31,7 @@ function RegisterPage(){
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('https://khaki-donuts-cut.loca.lt/auth/register',{user:formData}).then(res=>{
+        axios.post('https://poor-peaches-own.loca.lt/auth/register',{user:formData}).then(res=>{
             console.log(res);
             navigate('/');
         }).catch(err=>console.log(err))

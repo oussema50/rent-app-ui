@@ -21,10 +21,16 @@ function LoginPage(){
     const {email,password} = formData
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post( 'https://slimy-foxes-lose.loca.lt/auth/login',{email,password}).then(res=>{
+        axios.post( 'https://small-tools-rest.loca.lt/auth/login',{email,password}).then(res=>{
+            
             localStorage.setItem('token',res.data.token)
             localStorage.setItem('user',JSON.stringify(res.data.user))
-            navigate('/userDashbord')
+            if(res.data.user.role=="owner"){
+                navigate('/userDashbord')
+            }else{
+                navigate('/')
+            }
+            
         }).catch(err=>console.log(err))
     }
     return(

@@ -12,7 +12,7 @@ function ListPage(){
         const fetchData = async () => {
             const token = localStorage.getItem('token');
             try {
-              const response = await axios.get('https://slimy-foxes-lose.loca.lt/api/appartements/', {
+              const response = await axios.get('https://poor-peaches-own.loca.lt/api/appartements/', {
                 headers: {
                   Authorization: `Token ${token}`,
                 },

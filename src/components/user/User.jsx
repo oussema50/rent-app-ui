@@ -7,22 +7,15 @@ function User({item}){
                 <img src="/user.png" alt="" style={{width:"200px", height:"200px"}}/>
             </Link>
             <div className="textcontainer">
-                <Link to={`/rent/${item.id}`}>
-                    <h2 className="title">{item.id}</h2>
-                    
-                </Link>
+                 
                 <h2 className="title">
-                    <span>{item.first_name} </span>
+                   Name: 
+                    <span>  {item.first_name} </span>
                     <span>{item.last_name}</span>
                 </h2>
-                <h2 className="title">{item.email}</h2>
-                <span>{item.role}</span>
-                <div className="icons">
-                    <div className="icon">
-                        <button>update profile</button>
-                    </div>
-                    
-                </div>
+                <h2 className="title">Email:  {item.email}</h2>
+                <h3 className="title">Role:  {item.role}</h3>
+                
             </div>            
         </div>
     );

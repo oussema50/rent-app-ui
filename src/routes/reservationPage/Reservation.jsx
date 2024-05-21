@@ -14,7 +14,7 @@ function Reservation(){
     useEffect(()=>{
         const fetchData = async () => {
             try {
-                const response = await axios.get(`https://chatty-rules-boil.loca.lt/api/appartements/${id}/`, {
+                const response = await axios.get(`https://poor-peaches-own.loca.lt/api/appartements/${id}/`, {
                     headers: {
                       Authorization: `Token ${token}`,
                     },
@@ -46,7 +46,7 @@ function Reservation(){
         e.preventDefault();
         console.log(formData)
         
-        axios.post( `https://slimy-foxes-lose.loca.lt/api/appartements/${id}/reserve`,formData,
+        axios.post( `https://poor-peaches-own.loca.lt/api/appartements/${id}/reserve`,formData,
         {
             headers: {
               Authorization: `Token ${token}`,
